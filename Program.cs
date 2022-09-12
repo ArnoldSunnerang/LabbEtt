@@ -5,6 +5,7 @@
     int firstIndex = 0;
     int lastIndex = 0;
     ulong sum = 0;
+    int summands = 0;
 
     void AlongString()
     {
@@ -82,12 +83,22 @@
             greenString[i] = strang[firstIndex + i];
         }
         string sumString = new string(greenString);
-        sum = ulong.Parse(sumString) + sum;
+
+        try 
+        {
+            sum = ulong.Parse(sumString) + sum;
+
+        }
+        catch
+        {
+            summands++;
+        }
+
     }
 
     AlongString();
     Console.WriteLine();
-    Console.WriteLine($"Sum: {sum}");
+    Console.WriteLine($"The sum is {sum}, excluding {summands} numbers that are too large.");
 }
 
 Labb("");
