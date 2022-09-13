@@ -52,29 +52,6 @@
         }
     }
 
-    void WriteString()
-    {
-        for (int i = 0; i < strang.Length; i++)
-        {
-            if (i == firstIndex)
-            {
-                Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write(strang[i]);
-            }
-            else if (i == lastIndex)
-            {
-                Console.Write(strang[i]);
-                Console.ForegroundColor = ConsoleColor.White;
-            }
-            else
-            {
-                Console.Write(strang[i]);
-
-            }
-        }
-        Console.WriteLine();
-    }
-
     void SumString()
     {
         char[] coloredString = new char[(lastIndex - firstIndex) + 1];
@@ -96,6 +73,29 @@
             excludedSummands.Add(firstIndex);
         }
 
+    }
+
+    void WriteString()
+    {
+        for (int i = 0; i < strang.Length; i++)
+        {
+            if (i == firstIndex)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(strang[i]);
+            }
+            else if (i == lastIndex)
+            {
+                Console.Write(strang[i]);
+                Console.ForegroundColor = ConsoleColor.White;
+            }
+            else
+            {
+                Console.Write(strang[i]);
+
+            }
+        }
+        Console.WriteLine();
     }
 
     void WriteSum()
