@@ -1,8 +1,8 @@
 ﻿void Labb(string s)
 {
     char[] strang = s.ToCharArray();
-    int searchIndex = 0;
     int firstIndex = 0;
+    int searchIndex = 0;
     int lastIndex = 0;
     ulong sum = 0;
     List<int> excludedSummands = new List<int>();
@@ -107,7 +107,8 @@
         {
             Console.WriteLine();
             Console.WriteLine("The excluded summands begin on indices:");
-            foreach(int n in excludedSummands)
+            
+            foreach (int n in excludedSummands)
             {
                 Console.WriteLine(n);
             }
