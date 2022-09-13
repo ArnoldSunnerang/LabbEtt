@@ -5,7 +5,7 @@
     int firstIndex = 0;
     int lastIndex = 0;
     ulong sum = 0;
-    int summands = 0;
+    List<int> excludedSummands = new List<int>();
 
     void AlongString()
     {
@@ -77,12 +77,12 @@
 
     void SumString()
     {
-        char[] greenString = new char[(lastIndex - firstIndex) + 1];
-        for (int i = 0; i < (greenString.Length); i++)
+        char[] coloredString = new char[(lastIndex - firstIndex) + 1];
+        for (int i = 0; i < (coloredString.Length); i++)
         {
-            greenString[i] = strang[firstIndex + i];
+            coloredString[i] = strang[firstIndex + i];
         }
-        string sumString = new string(greenString);
+        string sumString = new string(coloredString);
 
         try 
         {
@@ -91,14 +91,28 @@
         }
         catch
         {
-            summands++;
+            excludedSummands.Add(firstIndex);
         }
 
     }
 
+    void WriteSum()
+    {
+        Console.WriteLine();
+        Console.WriteLine($"The sum is {sum}");
+        if (excludedSummands.Count > 0)
+        {
+            Console.WriteLine();
+            Console.WriteLine("The excluded summands begin on indices:");
+            foreach(int n in excludedSummands)
+            {
+                Console.WriteLine(n);
+            }
+        }
+    }
+
     AlongString();
-    Console.WriteLine();
-    Console.WriteLine($"The sum is {sum}, excluding {summands} numbers that are too large.");
+    WriteSum();
 }
 
-Labb("");
+Labb("29535123p48723487597645723645");
