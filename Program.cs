@@ -78,10 +78,12 @@
     void SumString()
     {
         char[] coloredString = new char[(lastIndex - firstIndex) + 1];
+        
         for (int i = 0; i < (coloredString.Length); i++)
         {
             coloredString[i] = strang[firstIndex + i];
         }
+        
         string sumString = new string(coloredString);
 
         try 
@@ -100,6 +102,7 @@
     {
         Console.WriteLine();
         Console.WriteLine($"The sum is {sum}");
+        
         if (excludedSummands.Count > 0)
         {
             Console.WriteLine();
