@@ -106,7 +106,7 @@
         if (excludedSummands.Count > 0)
         {
             Console.WriteLine();
-            Console.WriteLine("The excluded summands begin on indices:");
+            Console.WriteLine("The summands that are too large to be added begin on indices:");
             
             foreach (int n in excludedSummands)
             {
@@ -119,4 +119,4 @@
     WriteSum();
 }
 
-Labb("29535123p48723487597645723645");
+Labb("29535123p48999999999999999999999999999999999999999999999999999998723487597645723645");
